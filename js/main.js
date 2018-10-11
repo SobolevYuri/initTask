@@ -41,7 +41,8 @@ document.querySelector("#signup").addEventListener('click', function(e){
     document.querySelector("#signup-submit").addEventListener('click', function(e){ 
     e.preventDefault(); 
     if(document.querySelector("#email-sign-up").value == '' 
-    || document.querySelector("#pass-sign-up").value == ''){ 
+    || document.querySelector("#pass-sign-up").value == ''
+    || document.querySelector("#confirm-password").value == ''){ 
     if(document.querySelector(".sign-up-form span") == null){ 
     var registError=document.createElement('span'); 
     registError.style.color="red"; 
@@ -52,6 +53,11 @@ document.querySelector("#signup").addEventListener('click', function(e){
     return; 
     } 
     } else{ 
+        if(document.querySelector("#confirm-password").value != document.querySelector("#pass-sign-up").value){
+        alert("Repeat password properly, please");
+        document.querySelector("#confirm-password").value='';
+        return false;
+        }
     var userEmail=document.querySelector("#email-sign-up").value; 
     var userPassword=document.querySelector("#pass-sign-up").value; 
     localStorage.setItem(userEmail, userPassword); 
@@ -113,3 +119,4 @@ document.querySelector("#signup").addEventListener('click', function(e){
     function userInfo(userLogin){ 
     return `Hi, homie! Your email: ${userLogin}`; 
     }
+
