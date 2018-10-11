@@ -1,54 +1,81 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]> <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]> <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!-->
 <html class="no-js">
-    <!--<![endif]-->
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
+        <title>Initial Task</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" type="text/css" href="./css/styles.css">
     </head>
     <body>
-        <header>
-            <h1>Header of the page</h1>
-        </header>
-        <section class="layout">
-            <div class="wrapper">
-                <div class="sidebar"></div>
-                <div class="content">
-                    Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium
-                    doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore
-                    veritatis et quasi architecto beatae vitae dicta sunt, explicabo. Nemo enim
-                    ipsam voluptatem, quia voluptas sit, aspernatur aut odit aut fugit, sed quia
-                    consequuntur magni dolores eos, qui ratione voluptatem sequi nesciunt, neque
-                    porro quisquam est, qui dolorem ipsum, quia dolor sit, amet, consectetur,
-                    adipisci velit, sed quia non numquam eius modi tempora incidunt, ut labore et
-                    dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum
-                    exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi
-                    consequatur? Quis autem vel eum iure reprehenderit, qui in ea voluptate velit
-                    esse, quam nihil molestiae consequatur, vel illum, qui dolorem eum fugiat, quo
-                    voluptas nulla pariatur? At vero eos et accusamus et iusto odio dignissimos
-                    ducimus, qui blanditiis praesentium voluptatum deleniti atque corrupti, quos
-                    dolores et quas molestias excepturi sint, obcaecati cupiditate non provident,
-                    similique sunt in culpa, qui officia deserunt mollitia animi, id est laborum et
-                    dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam
-                    libero tempore, cum soluta nobis est eligendi optio, cumque nihil impedit, quo
-                    minus id, quod maxime placeat, facere possimus, omnis voluptas assumenda est,
-                    omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut
-                    rerum necessitatibus saepe eveniet, ut et voluptates repudiandae sint et
-                    molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut
-                    aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus
-                    asperiores repellat.
+        <div class="start-window">
+            <button id="signup" class="signup-btn start-btn">Register</button>
+            <span>or</span>
+            <button id="signin" class="signin-btn start-btn">Log In</button>
+        </div>
+        <form action="" class="sign-up-form">
+            <h2>Registration</h2>
+            <label for="email-sign-up">E-mail:</label>
+            <input
+                type="text"
+                name="email-sign-up"
+                id="email-sign-up"
+                placeholder="******@mailname.domen">
+            <label for="password-sign-up">Password:</label>
+            <input
+                type="password"
+                name="password-sign-up"
+                id="pass-sign-up"
+                placeholder="Must be at least 8 symbols">
+            <button id="signup-submit">Register!</button>
+        </form>
+        <form action="" class="sign-in-form">
+            <h2>Signing In</h2>
+            <label for="email-sign-in">E-mail:</label>
+            <input type="text" name="email-sign-in" id="email-sign-in">
+            <label for="password-sign-in">Password:</label>
+            <input type="password" name="password-sign-in" id="pass-sign-in">
+            <button id="signin-submit">Sign In!</button>
+        </form>
+        <div class="fullpage-wrap">
+            <header>
+                <h1>Header of the page</h1>
+            </header>
+            <div class="layout">
+                <div class="container wrapper">
+                    <aside class="sidebar"></aside>
+                    <div class="content">
+                        Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium
+                        doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore
+                        veritatis et quasi architecto beatae vitae dicta sunt, explicabo. Nemo enim
+                        ipsam voluptatem, quia voluptas sit, aspernatur aut odit aut fugit, sed quia
+                        consequuntur magni dolores eos, qui ratione voluptatem sequi nesciunt, neque
+                        porro quisquam est, qui dolorem ipsum, quia dolor sit, amet, consectetur,
+                        adipisci velit, sed quia non numquam eius modi tempora incidunt, ut labore et
+                        dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum
+                        exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi
+                        consequatur? Quis autem vel eum iure reprehenderit, qui in ea voluptate velit
+                        esse, quam nihil molestiae consequatur, vel illum, qui dolorem eum fugiat, quo
+                        voluptas nulla pariatur? At vero eos et accusamus et iusto odio dignissimos
+                        ducimus, qui blanditiis praesentium voluptatum deleniti atque corrupti, quos
+                        dolores et quas molestias excepturi sint, obcaecati cupiditate non provident,
+                        similique sunt in culpa, qui officia deserunt mollitia animi, id est laborum et
+                        dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam
+                        libero tempore, cum soluta nobis est eligendi optio, cumque nihil impedit, quo
+                        minus id, quod maxime placeat, facere possimus, omnis voluptas assumenda est,
+                        omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut
+                        rerum necessitatibus saepe eveniet, ut et voluptates repudiandae sint et
+                        molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut
+                        aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus
+                        asperiores repellat.
+                    </div>
                 </div>
             </div>
-        </section>
-        <footer>
-            <h2>Footer of the page</h2>
-        </footer>
+            <footer>
+                <h2>Footer of the page</h2>
+            </footer>
+        </div>
     </body>
+    <script src="./js/main.js"></script>
 </html>
