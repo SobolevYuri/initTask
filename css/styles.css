@@ -22,6 +22,7 @@ header {
     width: 100%;
     height: 80px;
     background: orange;
+    position: relative;
 }
 
 .layout .wrapper {
@@ -40,13 +41,13 @@ header {
     background: cyan;
 }
 
-.fullpage-wrap {
+.start-window {
     display: flex;
     flex-direction: column;
     height: 100%;
 }
 
-.layout {
+.fullpage-wrap{
     flex: 1 0 auto;
 }
 
@@ -57,48 +58,28 @@ footer {
     background: blue;
 }
 
-.start-window {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 17% auto auto;
-    width: 30%;
-    height: 150px;
-    border-radius: 15px;
-    border: 4px solid blue;
-    background: rgba(65, 61, 61, 0.644);
-    padding-top: 20px;
-}
-
-.fullpage-wrap,
-form {
+.user-profile,
+form,
+.logout-btn
+ {
     display: none;
 }
 
-.hide-window {
+.homepage-content.hide-window,
+nav.homepage-menu.hide-window{
     display: none;
 }
 
 .show-window {
-    display: block;
-}
-
-.show-fullpage {
     display: flex;
 }
 
 .start-btn {
     outline: none;
-    border-radius: 10px;
-    border: 2px solid blue;
-    width: 30%;
-    height: 30%;
-}
-
-.start-window span {
-    font-size: 17px;
-    font-weight: bold;
-    padding: 0 5px;
+    border-radius: 5px;
+    width: 8%;
+    height: 44%;
+    margin-right: 19px;
 }
 
 aside {
@@ -106,22 +87,29 @@ aside {
 }
 
 form {
-    margin: 15% auto auto;
+    flex-direction: column;
     width: 14%;
-    height: 220px;
     border-radius: 15px;
     border: 4px solid black;
-    background: rgba(48, 49, 49, 0.527);
-    padding-left: 45px;
+    background: rgb(146, 151, 151);;
+    padding-bottom: 15px;
+    position: absolute;
+    right: 16%;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-top: 0;
 }
 
-form span{
-    display:block;
+form span {
+    display: block;
 }
 
-form h2{
-    margin:5px auto 5px auto;
-    margin-left:13%;
+form h2 {
+    margin: 5px auto;
+}
+
+form * {
+    margin: 0 auto;
 }
 
 button,
@@ -131,16 +119,108 @@ input {
 }
 
 form button {
+    outline: none;
     padding: 5px;
-    margin-left:25%;
-    margin-top:10px;
+    margin-top: 10px;
 }
 
-form input{
-    height:25px;
-    width:80%;
+form input {
+    height: 32px;
+    width: 80%;
+    outline: none;
 }
 
-.sign-up-form{
-    height:250px;
+.error-text {
+    color: cyan;
+    font-size: 20px;
+    text-align: center;
 }
+
+button:hover {
+    background-color: rgba(142, 155, 228, 0.712);
+    transition: 0.4s;
+}
+
+#email-sign-in,
+#email-sign-up {
+    background-image: url("../icons/icons8-new-post-50.png");
+    background-position: 187px 6px;
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
+}
+
+#confirm-password,
+#pass-sign-in,
+#pass-sign-up {
+    background-image: url("../icons/icons8-lock-26.png");
+    background-position: 187px 6px;
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
+    transition: all 1s;
+}
+
+#confirm-password.checked-password,
+#email-sign-in.checked-password,
+#email-sign-up.checked-password,
+#pass-sign-in.checked-password,
+#pass-sign-up.checked-password {
+    background-image: url("../icons/icons8-checkmark-48.png");
+}
+
+#confirm-password.error-check-password {
+    background-image: url("../icons/icons8-high-priority-48.png");
+}
+
+button:hover,
+input:focus {
+    box-shadow: 0 0 11.9px 5px rgba(255, 255, 255, 0.69);
+}
+
+nav.homepage-menu{
+    height: 71px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(147, 14, 224);
+}
+
+.homepage-content{
+    display: flex;
+}
+
+.homepage-text{
+    font-size: 100px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin:auto;
+    margin-top: 12%;
+}
+
+.user-action-menu{
+    position: relative;
+}
+
+.close-form{
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    right: -1%;
+    top: -2%;
+}
+
+.logout-btn{
+    padding: 5px;
+    position: absolute;
+    right: 7%;
+    bottom: 3%;
+}
+
+/*.user-profile{
+    display: flex;
+}
+
+.homepage-content, nav.homepage-menu{
+    display: none;
+}*/
+
